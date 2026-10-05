@@ -1,4 +1,4 @@
-# CSCE-679-Data-Visualization-Assignment2
+# CSCE-679-Data-Visualization-Assignment1
 
 ## Level 1 & 2 (Basic): [Link](./level1.md)
 HK Temperature Heatmap
