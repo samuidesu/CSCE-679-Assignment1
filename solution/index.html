@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hong Kong Temperature Heatmap</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- D3 v7 is loaded globally; the modules in js/ use the global `d3`. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <h1>Hong Kong Monthly Temperature</h1>
+      <p>Daily maximum and minimum temperatures, 1997 – 2017</p>
+    </header>
+
+    <section class="card">
+      <h2>Level 1 · Year / Month Heatmap</h2>
+      <p class="description">
+        Each cell is one month. Its colour shows the highest daily maximum or the lowest
+        daily minimum temperature of that month. Hover over a cell for details.
+      </p>
+      <div id="level1-chart" class="chart"></div>
+    </section>
+
+    <section class="card">
+      <h2>Level 2 · Daily Temperature Within Each Month</h2>
+      <p class="description">
+        Recent years only. Inside each cell, the lines show the daily maximum and minimum
+        temperatures (x: day of month, y: temperature).
+      </p>
+      <div id="level2-chart" class="chart"></div>
+    </section>
+  </main>
+</body>
+</html>

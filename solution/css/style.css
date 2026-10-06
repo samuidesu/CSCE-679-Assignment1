@@ -1,0 +1,147 @@
+/* ---------- Page ---------- */
+:root {
+  --page-background: #f4f5f7;
+  --card-background: #ffffff;
+  --text-color: #1f2328;
+  --muted-text-color: #636c76;
+  --axis-color: #8c959f;
+  --accent-color: #d53e4f;
+}
+
+body {
+  margin: 0;
+  background: var(--page-background);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.page-header h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+.page-header p,
+.description {
+  margin: 0 0 16px;
+  color: var(--muted-text-color);
+}
+
+.card {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.load-error {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #fde8e8;
+  color: #9e0142;
+}
+
+/* ---------- Chart ---------- */
+.chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.axis text {
+  font-size: 11px;
+  fill: var(--muted-text-color);
+}
+
+.axis path,
+.axis line {
+  stroke: var(--axis-color);
+}
+
+.legend text {
+  font-size: 12px;
+  fill: var(--text-color);
+}
+
+.cell {
+  cursor: pointer;
+}
+
+.cell-background {
+  stroke: transparent;
+  stroke-width: 2;
+}
+
+.cell:hover .cell-background {
+  stroke: var(--text-color);
+}
+
+.daily-line {
+  fill: none;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+/* ---------- Max/min toggle ---------- */
+.mode-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mode-toggle button {
+  padding: 6px 14px;
+  border: 1px solid #d0d7de;
+  border-radius: 999px;
+  background: var(--card-background);
+  color: var(--text-color);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mode-toggle button.active {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.mode-toggle .hint {
+  font-size: 13px;
+  color: var(--muted-text-color);
+}
+
+/* ---------- Tooltip ---------- */
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background: var(--card-background);
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  font-size: 13px;
+  line-height: 1.5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+.tooltip-date {
+  font-weight: 600;
+}
